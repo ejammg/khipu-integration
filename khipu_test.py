@@ -1,12 +1,12 @@
 import requests
 
-# Reemplaza con tu API Key proporcionada por Khipu
+# API Key proporcionada por Khipu
 api_key = "d64172b1-88c8-4167-8b54-0842bbddbe85"
 
 # URL del endpoint para crear pagos
 url = "https://payment-api.khipu.com/v3/payments"
 
-# Encabezados requeridos por la API
+# Encabezados
 headers = {
     "x-api-key": api_key,
     "Content-Type": "application/json"
@@ -15,7 +15,7 @@ headers = {
 # Datos del pago
 data = {
     "amount": 5000.0,  # Monto del pago en la moneda especificada
-    "currency": "CLP",  # Código de moneda en formato ISO 4217
+    "currency": "CLP",  # Código de moneda
     "subject": "Cobro de prueba",  # Asunto o descripción breve del pago
     "transaction_id": "orden-1234",  # Identificador único de la transacción
     "return_url": "https://tusitio.com/retorno",  # URL de retorno después del pago
